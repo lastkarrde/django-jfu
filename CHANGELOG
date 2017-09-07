@@ -1,3 +1,7 @@
+September 08, 2017
+- Support for Django 1.11.
+- pylint compliance for module code.
+
 July 17, 2013
 - Updated JS_INIT block to match jQuery File Upload demonstration 
     (as of 17-07-2013) 
