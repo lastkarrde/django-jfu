@@ -1,6 +1,6 @@
 from django.template.context_processors import csrf
 from django.core.urlresolvers import reverse
-from django.template import Library, Context, loader
+from django.template import Library, loader
 
 register = Library()
 
@@ -21,7 +21,7 @@ def jfu(
     Any additionally supplied positional and keyword arguments are directly
     forwarded to the named custom upload-handling URL.
     """
-    context.update( { 
+    context.update( {
         'JQ_OPEN'  : '{%',
         'JQ_CLOSE' : '%}',
         'upload_handler_url': reverse(
@@ -36,4 +36,4 @@ def jfu(
 
     t = loader.get_template( template_name )
 
-    return t.render( Context( context ) )
+    return t.render(context.flatten())
