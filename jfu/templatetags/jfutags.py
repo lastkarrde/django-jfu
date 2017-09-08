@@ -4,10 +4,10 @@ from django.template.context_processors import csrf
 from django.core.urlresolvers import reverse
 from django.template import Library, loader
 
-REGISTER = Library()
+register = Library()
 
 
-@REGISTER.simple_tag(takes_context=True)
+@register.simple_tag(takes_context=True)
 def jfu(
         context,
         template_name='jfu/upload_form.html',
