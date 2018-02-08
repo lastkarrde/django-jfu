@@ -1,8 +1,12 @@
 """Template tag used to render JFU form"""
 
 from django.template.context_processors import csrf
-from django.core.urlresolvers import reverse
 from django.template import Library, loader
+
+try:
+    from django.core.urlresolvers import reverse
+except ImportError:
+    from django.urls import reverse
 
 register = Library()
 
